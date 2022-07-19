@@ -1,10 +1,10 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function generateLicenseBadge(license) {
+function generateLicenseBadge(license){
 
   //converts - to % to allow viewing in url
   const licenseName = encodeURIComponent(license.replace('-', ' '))
-  return `!${license}(https://img.shields.io/badge/License-${licenseName}-green)`
+  return `![${license}-licensed](https://img.shields.io/badge/license-${licenseName}-green)`
 }
 
 
