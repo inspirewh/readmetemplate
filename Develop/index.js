@@ -3,7 +3,7 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generate-markdown');
 const fs = require('fs/promises');
-const parth = require('path');
+const path = require('path');
 
 
 //Questions to ask:
@@ -36,7 +36,7 @@ inquirer.prompt([
     {
         type: 'input',
         message: "Installation",
-        name: 'description',
+        name: 'installation',
     },
     {
         type: 'input',
@@ -58,7 +58,7 @@ inquirer.prompt([
         type: 'input',
         message: "github",
         name: 'github',
-    }
+    },
     {
         type: 'input',
         message: "email",
@@ -73,18 +73,20 @@ inquirer.prompt([
     //generate readme file based on the responses
     //in the output folder
 
-    const outputPath = path.join(__dirname,'output', 'generated.md');
+    const outputPath = path.join(__dirname, 'output', 'README.md');
 
     fs.writeFile(outputPath, markdown, 'utf-8')
-        .then(() => {
-            console.log('generated!')
-        });
+    .then(() => {
+      console.log('README.md file is successfully generated in output folder!')
+    });
 
 })
 
 
 
-
+//.catch((err) => {
+ //   console.log(err)
+//})
 
 
 
