@@ -16,6 +16,7 @@ function generateMarkdown({
   installation,
   usage,
   contribution,
+  test,
   github,
   email
 }) {
